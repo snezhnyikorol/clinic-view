@@ -1,0 +1,24 @@
+<div class="profiles" *ngIf="!loading; else elseBlock">
+  <table class="table table-bordered table-hover">
+    <thead>
+    <tr>
+      <th>Бренд</th>
+      <th>Материал</th>
+      <th>Страна</th>
+      <th>Сроки приживания</th>
+      <th>Гарантия</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let item of brand" app-brand-item [item]="item" (click)="selectedBrand(item?.form_id, $event)" [style.backgroundColor]="item?.form_id == selected ? '#cccccc' : '' ">
+    </tr>
+    </tbody>
+  </table>
+  <button [class.disabled]="!selected" class="btn btn-primary d-block mx-auto" (click)="startQuiz()">Дальше</button>
+</div>
+
+<ng-template #elseBlock>
+  <div class="lds-ring-container">
+    <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+  </div>
+</ng-template>

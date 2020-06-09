@@ -1,0 +1,11 @@
+
+  <div class="lds-ring-container" [class.d-none]="!loading">
+    <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+  </div>
+
+<div [class.d-none]="loading">
+  <router-outlet></router-outlet>
+  <app-navigation></app-navigation>
+</div>
+
+

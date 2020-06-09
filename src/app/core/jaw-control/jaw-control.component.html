@@ -1,0 +1,7 @@
+<div class="row align-items-center" [formGroup]="form">
+  <div class="check col-1">
+    <div class="color" (click)="clicked = true" [style.backgroundColor]="clicked ? values?.color : ''"></div>
+  </div>
+  <div class="label col">{{values?.name}}</div>
+  <div class="input col-2" [formGroupName]="stageString"><input [formControlName]="values?.color" name="Name" readonly class="form-control" type="text"></div>
+</div>

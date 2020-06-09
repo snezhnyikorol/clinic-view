@@ -1,0 +1,6 @@
+<form (ngSubmit)="onSubmit()" [formGroup]="form" id="{{section?.id}}" class="section">
+  <div class="section-header">
+    <h1>{{section?.name}}</h1>
+  </div>
+  <app-question *ngFor="let question of section?.children" [form]="form" [question]="question"></app-question>
+</form>

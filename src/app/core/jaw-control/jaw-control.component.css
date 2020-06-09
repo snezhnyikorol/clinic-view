@@ -1,0 +1,13 @@
+.color {
+  content: "";
+  width: 40px;
+  height: 40px;
+  margin: 5px;
+  background-color: #cccccc;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.form-control[readonly] {
+  background-color: #ffffff;
+}

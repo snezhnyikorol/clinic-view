@@ -1,0 +1,5 @@
+{
+  "/api*": "/$1",
+  "/forms/available": "/available",
+  "/form/19/questions": "/demoform"
+}
